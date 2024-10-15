@@ -1,0 +1,17 @@
+
+.webcard{
+    background: black;
+    color: white;
+    font-family: mount hills;
+    font-weight: 900;
+    font-size: 4rem;
+    padding-top: 7rem;
+    word-spacing: 1px;
+   
+    height: 24vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}

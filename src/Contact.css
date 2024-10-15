@@ -1,0 +1,112 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #746ce0, #e982e7);
+  padding: 20px;
+}
+
+.contact-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 1200px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: scale(1.02);
+}
+
+.contact-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #e5e5e5;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 30px);
+}
+
+.project-details-group {
+  flex: 1 1 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #9f00f3;
+  box-shadow: 0 0 15px rgba(159, 0, 243, 0.5);
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+.service-checkbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #9f00f3;
+}
+
+.service-checkbox label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #9f00f3, #ff0075);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #ff0075, #9f00f3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(159, 0, 243, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}

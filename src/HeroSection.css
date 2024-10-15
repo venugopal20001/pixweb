@@ -1,0 +1,143 @@
+.hero {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #746ce0, #e982e7);
+  text-align: center;
+}
+
+.bounce {
+  font-family: Mount Hills;
+  color: black;
+  font-weight: 700;
+  align-items: center;
+  font-size: 8rem;
+  margin-bottom: 30px;
+  animation-delay: 2s;
+  display: inline-block; /* Necessary for transform */
+  animation: bounce 1s infinite; /* Apply bounce animation */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Original position */
+  }
+  40% {
+    transform: translateY(-30px); /* Move up */
+  }
+  60% {
+    transform: translateY(-15px); /* Move down */
+  }
+}
+
+.hero-title {
+  padding-top: 50px;
+  font-family: Mount Hills;
+  color: black;
+  font-weight: 800;
+  font-size: 16rem;
+  margin-bottom: 5px;
+}
+
+.hero-des {
+  font-family: Kanit;
+  font-size: 2rem;
+  text-align: center;
+  text-wrap: nowrap;
+  color: white;
+  padding-bottom: 100px;
+}
+
+/* Container to center buttons and provide structure */
+.button-section-container {
+  display: block;
+  opacity: 100%;
+  border-radius: 15px;
+  background-color: transparent; /* Set the background to transparent */
+  box-shadow: none; /* Remove box-shadow */
+  max-width: 300px;
+  margin: 0 auto; /* Center the container on the page */
+}
+
+/* Custom button styling */
+.custom-button {
+  background-color: black; /* Primary button color */
+  color: white;
+  font-family: 'Kanit', sans-serif; /* Be sure to include the correct font */
+  font-weight: 700;
+  font-style: normal; /* Fixed the incorrect 'bolder' syntax */
+  text-transform: uppercase;
+  padding: 20px 30px;
+  margin-top: -40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 300px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-45deg);
+  transition: all 0.7s ease;
+}
+
+.custom-button:hover::before {
+  left: 150%;
+}
+
+.custom-button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px); /* Slightly raise the button */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.custom-button:active {
+  transform: translateY(0); /* Button returns to normal position on click */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.marquee-container {
+  position: absolute; /* Changed to absolute to position relative to the hero section */
+  margin-right: 20px;
+  margin-top: 90px;
+  top: 0;
+  background-color: black;
+  right: 0;
+  height: 100%;
+  width: 100px; /* Adjust width as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-content {
+  align-items: center;
+  writing-mode: vertical-rl; /* Makes the text run vertically */
+  animation: scrollVertical 20s linear infinite; /* Adjusted animation */
+  text-transform: uppercase;
+  font-family: mount hills;
+  font-size: 2.5rem;
+  color: white; /* Change color to match your theme */
+}
+
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(100%); /* Start from bottom */
+  }
+  100% {
+    transform: translateY(-100%); /* Move to top */
+  }
+}

@@ -1,0 +1,113 @@
+.about-section{
+  height: max-content;
+}
+
+.about-container {
+  background: linear-gradient(to right, #746ce0, #e982e7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.text-section {
+  display: flex; /* Use flexbox for the text section */
+  justify-content:center; /* Space out the items evenly */
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+
+.abt1, .abt2, .abt3 {
+  font-family: mount hills;
+  color: black;
+  font-size: 7rem;
+  font-weight: 900;
+  padding: 15px; /* Add some padding for spacing */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s, transform 1s ease-in-out; /* Smooth transition */
+  flex: 1; /* Allow flex items to grow */
+}
+
+/* Set individual animation styles */
+.abt1 {
+  transform: translateX(-100%); /* Start off-screen to the left */
+}
+
+.abt2 {
+  transform: scale(0); /* Start scaled down */
+}
+
+.abt3 {
+  transform: translateX(100%); /* Start off-screen to the right */
+}
+
+/* Trigger animation when 'animate' class is added */
+.abt1.animate, .abt2.animate, .abt3.animate {
+  opacity: 1; /* Make it visible */
+}
+
+.abt1.animate {
+  animation: slideInLeft 1s forwards; /* Apply slide in animation */
+}
+
+.abt2.animate {
+  animation: scaleUp 1s forwards; /* Apply scale up animation */
+}
+
+.abt3.animate {
+  animation: slideInRight 1s forwards; /* Apply slide in animation */
+}
+
+/* Keyframes for animations */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.about-desc {
+  color: black;
+  font-family: kanit;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.image-section {
+  size: 60vh;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.about-image {
+  max-width: 100%;
+}
